@@ -1,0 +1,210 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background: linear-gradient(135deg, #000000, #434343);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styling */
+.head {
+    background: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ff0049;
+}
+
+/* Paragraph styling */
+.para1 {
+    color: #ffffff;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* Sticky header styling */
+#head1 {
+    color: #ff0049;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    border: 2px solid #ff0049;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    font-size: 1.5em;
+}
+
+/* Background design class */
+.bgdesign {
+    background: linear-gradient(135deg, #000000, #434343);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.toggle-btn .circle {
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.toggle-btn .label {
+    font-size: 0.8em;
+    color: #000;
+    margin: 0 5px;
+}
+.dark-mode .toggle-btn .circle {
+    transform: translateX(70px);
+}
+.dark-mode .toggle-btn {
+    background: #333;
+}
+.dark-mode .toggle-btn .label {
+    color: #fff;
+}
+.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+.dark-mode .head {
+    background: #333333;
+    border-bottom: 2px solid #ff0049;
+}
+.dark-mode .bgdesign {
+    background: #1e1e1e;
+}
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+.content h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ff0049;
+}
+.content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff0049;
+}
+.navbar .menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #1a1a1a;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+}
+.navbar .menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: background 0.3s, color 0.3s;
+}
+.navbar .menu a:hover {
+    background: #ff0049;
+    color: #ffffff;
+    border-radius: 5px;
+}
+.navbar .menu-btn {
+    font-size: 1.5em;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+}
+.navbar .menu-btn:hover {
+    color: #ff0049;
+}
+.navbar .menu.active {
+    left: 0;
+}
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+.content h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ff0049;
+}
+.content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+.foot {
+    text-align: center;
+    padding: 10px;
+    background: #1a1a1a;
+    color: #ffffff;
+}
+@media (min-width: 600px) {
+    .navbar .menu {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+    }
+    .navbar .menu a {
+        padding: 10px 15px;
+    }
+    .navbar .menu-btn {
+        display: none;
+    }
+}
