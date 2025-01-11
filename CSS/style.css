@@ -1,4 +1,8 @@
 /* Resetting default browser styles */
+:root {
+    --background-body: #ffffff;
+    --title: #000000;
+}
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +17,14 @@ body {
     line-height: 1.6;
 }
 
+
 /* Header styling */
 .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #1a1a1a;
     padding: 20px;
-    text-align: center;
     border-bottom: 2px solid #ff0049;
 }
 
@@ -59,7 +66,7 @@ body {
 }
 
 .toggle-btn {
-    position: fixed;
+    position: relative;
     top: 20px;
     right: 20px;
     width: 100px;
@@ -74,8 +81,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .toggle-btn .circle {
-    width: 25px;
-    height: 25px;
+    width: px;
+    height: 30px;
     background: #fff;
     border-radius: 50%;
     transition: transform 0.3s ease;
@@ -97,10 +104,12 @@ body {
 .dark-mode {
     background: #121212;
     color: #ffffff;
+    
 }
 .dark-mode .head {
     background: #333333;
     border-bottom: 2px solid #ff0049;
+
 }
 .dark-mode .bgdesign {
     background: #1e1e1e;
@@ -206,5 +215,105 @@ body {
     }
     .navbar .menu-btn {
         display: none;
+    }
+
+    .toggleButton {
+        height: 10px;
+        width: 40px;
+        background-color: #0A2649;
+        border: none;
+        border-radius: 120px;
+        cursor: pointer;
+        &:hover {
+           /* box-shadow: inset 0 0 15px 5px rgba(200, 200, 200, 0.6);  Sombra interna com cor clara for moon */
+           /* box-shadow: inset 0 0 15px 5px rgba(255, 223, 127, 0.5);  Sombra interna com cor suave for sun */
+        }
+    }
+}
+
+
+
+.toggle-container-father {
+    position: absolute;
+    right: 3%;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.toggle-container-children {
+    height: auto;
+    width:  auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggleButton {
+    height: 60px;
+    width: 60px;
+    background-color: #0A2649;
+    border: none;
+    border-radius: 120px;
+    cursor: pointer;
+    &:hover {
+       /* box-shadow: inset 0 0 15px 5px rgba(200, 200, 200, 0.6);  Sombra interna com cor clara for moon */
+       /* box-shadow: inset 0 0 15px 5px rgba(255, 223, 127, 0.5);  Sombra interna com cor suave for sun */
+    }
+}
+
+
+.sunIcon {
+    height: 40px;
+    width: 35px;
+    fill: white;
+    transition: 0.5s;
+    &:hover {
+        fill: white;
+    }
+    
+}
+
+.moonIcon {
+    width: 45px;
+    height: 45px;
+    z-index: 1000;
+    fill: white;
+    transition: 0.5s;
+    &:hover {
+        fill: #ada6a8;
+    }
+}
+
+.disable {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .head  {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+
+        h1 {
+            font-size: 20pt;
+        }
+    }
+
+    .toggleButton {
+        height: 50px;  /* Menor altura */
+        width: 50px;   /* Menor largura */
+    }
+
+    .sunIcon {
+        height: 35px;  /* Menor tamanho para o ícone do sol */
+        width: 25px;
+    }
+
+    .moonIcon {
+        height: 45px;  /* Menor tamanho para o ícone da lua */
+        width: 35px;
     }
 }
